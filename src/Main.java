@@ -16,23 +16,16 @@ public class Main {
         car2.course = 50000.0;
 
 
-        System.out.println(car1.color);
-        System.out.println(car1.course);
-        System.out.println(car1.isRun);
 
-        System.out.println(car2.color);
-        System.out.println(car2.course);
-        System.out.println(car2.isRun);
 
         Human me = new Human(1888);
         Human sister = new Human(1990);
 
         me.pet = cat;
+        me.setSalary(5000.0);
+        me.setSalary(5000.0);
 
-        cat.takeAWalk();
-        cat.takeAWalk();
-        cat.takeAWalk();
-        cat.takeAWalk();
+        me.getSalary();
 
 
 
