@@ -1,3 +1,5 @@
+package devices;
+
 public class Car {
 
     final String producer;
@@ -7,11 +9,16 @@ public class Car {
     Double course;
     Boolean isRun;
 
-    Double price;
+    public Double price;
 
     public Car(String producer, String model , Double price) {
         this.producer = producer;
         this.model = model;
         this.price = price;
+    }
+
+    public String ToString ()
+    {
+        return ("Model:"+model + " Producent:" +producer+" Cena:"+price+"");
     }
 }

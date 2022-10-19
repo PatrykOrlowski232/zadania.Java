@@ -1,4 +1,4 @@
-import com.sun.jdi.VoidType;
+import devices.Car;
 
 public class Human {
     String firstName;
@@ -58,6 +58,10 @@ public class Human {
         return null;
     }
 
+    String ToString()
+    {
+        return("Imie: "+ firstName + " rok urodzenia" + yearOfBirth +" zarobki: " + salary);
+    }
 
     Human(Integer yearOfBirth){
         this.yearOfBirth = yearOfBirth;
