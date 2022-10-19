@@ -7,8 +7,11 @@ public class Car {
     Double course;
     Boolean isRun;
 
-    public Car(String producer, String model) {
+    Double price;
+
+    public Car(String producer, String model , Double price) {
         this.producer = producer;
         this.model = model;
+        this.price = price;
     }
 }

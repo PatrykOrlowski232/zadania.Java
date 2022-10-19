@@ -5,16 +5,17 @@ public class Human {
     String lastName;
     Double salary;
     final Integer yearOfBirth;
-    Car car;
+    private Car car;
     Animal pet;
 
     public Void getSalary ()
     {
+
         System.out.println(this.salary.toString());
         return null;
     }
 
-    public Void setSalary(Double salary) {
+    public String setSalary(Double salary) {
 
 
         if (salary < 0) {
@@ -29,6 +30,35 @@ public class Human {
             return null;
         }
     }
+    public String getCar ()
+    {
+        return (this.car.toString());
+    }
+
+    public Void setCar (Car car)
+    {
+
+
+        if(this.salary > car.price )
+        {
+            System.out.println("Udało Ci się kupić samochód");
+            this.car = car;
+        }
+
+        else if(this.salary > (car.price / 12))
+        {
+           System.out.println("Udało Ci się kupić samochód na raty");
+            this.car = car;
+        }
+
+        else
+        {
+            System.out.println("Niestety nie stać Cie na samochód");
+        }
+        return null;
+    }
+
+
     Human(Integer yearOfBirth){
         this.yearOfBirth = yearOfBirth;
     }
