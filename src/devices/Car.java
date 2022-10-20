@@ -1,24 +1,23 @@
 package devices;
 
-public class Car {
+public class Car extends Device {
 
-    final String producer;
 
-    final String model;
     String color;
     Double course;
     Boolean isRun;
 
     public Double price;
 
-    public Car(String producer, String model , Double price) {
+    public Car(String producer, String model , String yearofProduction , Double price) {
         this.producer = producer;
         this.model = model;
+        this.yearOfProduction = yearofProduction;
         this.price = price;
     }
+    public void turnOn(){
+        this.isRun = true;
 
-    public String ToString ()
-    {
-        return ("Model:"+model + " Producent:" +producer+" Cena:"+price+"");
     }
+
 }

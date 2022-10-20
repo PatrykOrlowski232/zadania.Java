@@ -1,21 +1,22 @@
 package devices;
 
-public class Phone {
-    String producer;
-    String model;
+public class Phone extends Device {
+
     Double price;
 
-    public String ToString()
-    {
-        return("producent:"+ producer + " Model:"+ model + " Cena:" + price );
-    }
 
-    public Phone (String producer  , String model , Double price)
+
+    public Phone (String producer  , String model , String yearOfProduction)
     {
         this.producer = producer;
         this.model = model;
-        this.price = price;
+        this.yearOfProduction = yearOfProduction;
 
+
+    }
+
+    public void turnOn(){
+        this.isRun = true;
 
     }
 
