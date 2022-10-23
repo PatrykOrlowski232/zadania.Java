@@ -21,22 +21,19 @@ public class Main {
         me.firstName = "Patryk";
         Human sister = new Human(1990);
 
+        sister.cash = 1000.0;
+        me.cash = 0.0;
         me.pet = dog;
 
         me.setSalary(4000.0);
 
-        me.getSalary();
+        System.out.println(sister.pet);
+        System.out.println(me.pet);
 
-        me.setCar(car1);
-        me.getCar();
-        System.out.println(car2);
-        System.out.println(car1.ToString());
-        System.out.println(dog.ToString());
-        System.out.println(me.ToString());
-        phone1.turnOn();
-        car1.turnOn();
-        System.out.println(phone1.ToString());
-        System.out.println(car1.ToString());
+        dog.sell(me,sister,500.0);
+        dog.sell(me,sister,500.0);
+        System.out.println(sister.pet);
+        System.out.println(me.pet);
 
 
 

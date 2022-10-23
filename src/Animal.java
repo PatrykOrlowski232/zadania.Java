@@ -1,4 +1,4 @@
-public class Animal {
+public class Animal implements Selleable {
     private static final Double DEFAULT_DOG_WEIGHT = 10.5;
     private static final Double DEFAULT_CAT_WEIGHT = 4.0;
     private static final Double DEFAULT_ELEPHANT_WEIGHT = 700.0;
@@ -46,6 +46,23 @@ public class Animal {
 
 
     public String ToString() {
-        return ("Imie:" + name + " gatunek:" + species + " waga:" + species);
+        return ("Imie:" + name + " gatunek:" + species + " waga:" + weight);
+    }
+
+   public  void sell(Human seller, Human buyer, Double price) {
+        if (this == seller.pet) {
+            if (buyer.cash >= price)
+            {
+                buyer.cash -= price;
+                seller.cash += price;
+                buyer.pet = this;
+                seller.pet = null;
+                System.out.println("Zwierze "+this.species+" zostało sprzedane");
+
+            } else System.out.println("Kupujący nie ma wystarczająco gotówki");
+
+                                    } else System.out.println("Sprzedający nie posiada tego zwierzęcia");
+
     }
 }
+

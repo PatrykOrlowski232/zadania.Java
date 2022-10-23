@@ -5,7 +5,7 @@ public class Car extends Device {
 
     String color;
     Double course;
-    Boolean isRun;
+
 
     public Double price;
 

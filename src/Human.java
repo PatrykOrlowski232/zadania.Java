@@ -1,12 +1,17 @@
-import devices.Car;
+import devices.*;
+
 
 public class Human {
     String firstName;
     String lastName;
     Double salary;
+
+    Double cash;
     final Integer yearOfBirth;
     private Car car;
     Animal pet;
+
+    Phone phone;
 
     public Void getSalary ()
     {
